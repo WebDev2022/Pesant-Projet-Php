@@ -1,0 +1,7 @@
+/vendor/
+.env
+.env-server-prod
+.env-server-chris
+.env-server-chris-commercial
+cpt-Final.sql
+.env-prod

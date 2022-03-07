@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@splidejs/splide": "^3.6.9",
+    "nanogallery2": "^3.0.5"
+  }
+}

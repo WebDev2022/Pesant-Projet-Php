@@ -1,0 +1,2856 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+/*------------------- HEADER MENU ------------------*/
+/*------------------- HEADER MENU ------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+body,
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navigation {
+  z-index: 10;
+}
+
+.navigation ul {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation ul a {
+  text-decoration: none;
+  color: #a1a1a1 !important;
+}
+
+.navigation ul a:hover {
+  color: white !important;
+}
+
+.navigation ul .active {
+  color: white !important;
+}
+
+/* Logo */
+.logo img {
+  width: 280px;
+}
+
+.logo p {
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.navigation {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* 
+    Le background est dynamique car transparent juste sur la page d'accueil => application.php 
+    background-color: #00000080; 
+    */
+  height: 91px;
+}
+
+.navigation .navigation-container-desktop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1335px) {
+  .navigation .navigation-container-desktop .desktop {
+    display: none !important;
+  }
+}
+
+.navigation .navigation-container-desktop .desktop ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navigation .navigation-container-desktop .desktop ul li:not(:first-child) {
+  margin-left: 25px;
+}
+
+.navigation .mobile {
+  display: none;
+  position: fixed;
+  top: -900px;
+  z-index: 1;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  opacity: 0.95;
+}
+
+.navigation .mobile ul {
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.navigation .mobile ul li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.navigation .icon-menu {
+  display: none;
+  color: white !important;
+  font-size: 33px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1335px) {
+  .navigation .icon-menu {
+    display: block !important;
+  }
+}
+
+.navigation .fa-times {
+  display: none;
+}
+
+.menu-open {
+  z-index: 2;
+}
+
+/* Dropdown Desktop */
+.fa-caret-down {
+  margin-left: 5px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: ease-in-out 0.8s;
+  transition: ease-in-out 0.8s;
+}
+
+.desktop .DropDown-main-first {
+  position: relative;
+}
+
+.desktop .DropDown-main-first .DropDown-menu-first {
+  display: none;
+  position: absolute;
+  top: 25px;
+  width: 265px !important;
+  height: 92px;
+  padding: 10px;
+  border: solid 2px white;
+  background-color: black;
+  -webkit-box-shadow: 1px 1px 1px gray;
+          box-shadow: 1px 1px 1px gray;
+}
+
+.desktop .DropDown-main-first .DropDown-menu-first ul {
+  display: block !important;
+}
+
+.desktop .DropDown-main-first .DropDown-menu-first li {
+  margin: 0 !important;
+  padding: 0;
+}
+
+.desktop .DropDown-main-second {
+  position: relative;
+  top: 0px;
+}
+
+.desktop .DropDown-main-second .DropDown-menu-second {
+  display: none;
+  width: 135px !important;
+  padding: 10px;
+  border: solid 2px white;
+  background-color: black !important;
+  -webkit-box-shadow: 1px 1px 1px gray;
+          box-shadow: 1px 1px 1px gray;
+  position: absolute;
+  left: 105%;
+  top: -12px;
+}
+
+/* Dropdown Mobile */
+.mobile button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  color: #a1a1a1;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mobile button:hover {
+  color: white;
+}
+
+.mobile .DropDown-menu-resp {
+  display: none;
+}
+
+.mobile .DropDown-menu-resp ul {
+  text-transform: none;
+  top: 125px;
+  text-align: left;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: white solid 3px;
+  padding: 10px;
+}
+
+.mobile .DropDown-menu-resp ul li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mobile .DropDown-menu-resp .list-formations-calendrier {
+  margin-left: 20px;
+}
+
+.mobile .DropDown-menu-resp .list-formations-calendrier li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mobile p {
+  color: white;
+  margin: 10px 0px;
+}
+
+.rotate {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.fa-book {
+  color: #b71720;
+}
+
+.fa-book,
+.fa-long-arrow-alt-right {
+  margin-right: 5px;
+}
+
+/* Intersection Object */
+[class*="desktop-"] {
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+[class*="mobile-"] {
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.reveal-X-Right {
+  -webkit-transform: translateX(-1000px);
+          transform: translateX(-1000px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  -webkit-transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.reveal-visible [class*="desktop-"] {
+  opacity: 1;
+  -webkit-transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.reverse-visible {
+  opacity: 0;
+  -webkit-transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+/* Desktop reveal */
+.desktop-2 {
+  -webkit-transition-delay: 0.2s !important;
+          transition-delay: 0.2s !important;
+}
+
+.desktop-3 {
+  -webkit-transition-delay: 0.3s !important;
+          transition-delay: 0.3s !important;
+}
+
+.desktop-4 {
+  -webkit-transition-delay: 0.4s !important;
+          transition-delay: 0.4s !important;
+}
+
+.desktop-5 {
+  -webkit-transition-delay: 0.5s !important;
+          transition-delay: 0.5s !important;
+}
+
+.desktop-6 {
+  -webkit-transition-delay: 0.6s !important;
+          transition-delay: 0.6s !important;
+}
+
+.desktop-7 {
+  -webkit-transition-delay: 0.7s !important;
+          transition-delay: 0.7s !important;
+}
+
+.desktop-8 {
+  -webkit-transition-delay: 0.7s !important;
+          transition-delay: 0.7s !important;
+}
+
+/* Mobile reveal */
+.mobile-1 {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.mobile-2 {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.mobile-3 {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.mobile-4 {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.mobile-5 {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.mobile-6 {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.mobile-7 {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.mobile-8 {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+/*------------------- SLIDER ------------------*/
+/*------------------- SLIDER ------------------*/
+/* Google Reviews Splide */
+#google-review {
+  margin-top: 10px;
+  position: relative;
+  width: 60%;
+  margin: auto;
+}
+
+#google-review h3 {
+  font-family: "Courgette";
+  font-size: 32px;
+  color: #273044;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+#google-review .splide__pagination {
+  display: none;
+}
+
+#google-review .splide__arrows i {
+  color: #ada9a9b8;
+  font-size: 30px;
+}
+
+#google-review .splide__arrow--prev {
+  position: absolute;
+  top: 41%;
+  left: -6%;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform ease-in 0.2s;
+  transition: -webkit-transform ease-in 0.2s;
+  transition: transform ease-in 0.2s;
+  transition: transform ease-in 0.2s, -webkit-transform ease-in 0.2s;
+}
+
+#google-review .splide__arrow--next {
+  position: absolute;
+  top: 41%;
+  right: -6%;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform ease-in 0.2s;
+  transition: -webkit-transform ease-in 0.2s;
+  transition: transform ease-in 0.2s;
+  transition: transform ease-in 0.2s, -webkit-transform ease-in 0.2s;
+}
+
+#google-review .splide__arrow--prev:hover,
+#google-review .splide__arrow--next:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #4d4c4cb8;
+}
+
+#google-review .google-comment {
+  position: relative;
+  border: 1px solid #ededed;
+  border-radius: 25px;
+  background-color: #fafafa;
+  padding: 25px;
+  font-size: 14px;
+}
+
+#google-review .avatar-google img {
+  width: 70px;
+  height: 70px;
+}
+
+#google-review .comment-date {
+  font-size: 13px !important;
+  color: #555555;
+}
+
+#google-review .total-reviews-company {
+  font-size: 14px;
+}
+
+/* Page Photos */
+.photos {
+  text-align: center;
+  margin: 50px 20px;
+  font-family: "Montserrat", Sans-serif;
+  color: #273044;
+}
+
+.photos h2 {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.photos h4 {
+  margin: 0;
+}
+
+.photos p {
+  font-size: 14px;
+}
+
+#gallery {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 60px !important;
+}
+
+#videos {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 80px !important;
+}
+
+#videos video {
+  width: 100% !important;
+  height: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  #videos video {
+    width: 300px !important;
+  }
+  #videos .cancel-row-margins {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+}
+
+/* PROGRESS BAR */
+.splide__progress__bar {
+  height: 10px;
+  background: #f17578;
+}
+
+.splide {
+  position: relative;
+}
+
+.splide__slide {
+  position: relative;
+}
+
+.splide__arrows i {
+  color: rgba(255, 255, 255, 0.445);
+  font-size: 50px;
+}
+
+.splide__arrow--prev {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform ease-in 0.2s;
+  transition: -webkit-transform ease-in 0.2s;
+  transition: transform ease-in 0.2s;
+  transition: transform ease-in 0.2s, -webkit-transform ease-in 0.2s;
+}
+
+.splide__arrow--next {
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform ease-in 0.2s;
+  transition: -webkit-transform ease-in 0.2s;
+  transition: transform ease-in 0.2s;
+  transition: transform ease-in 0.2s, -webkit-transform ease-in 0.2s;
+}
+
+.splide__arrow--prev:hover,
+.splide__arrow--next:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: azure;
+}
+
+.splide__slide .img-slider {
+  width: 100%;
+  height: 90vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.title {
+  min-width: 70vw;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.title h1,
+.title h5 {
+  font-family: "Roboto", sans-serif !important;
+  margin: 0;
+  color: white !important;
+}
+
+.title h1 {
+  font-size: 70px !important;
+  margin-bottom: 10px;
+}
+
+.title h5 {
+  font-size: 30px !important;
+}
+
+.logo-princier-monaco {
+  position: absolute;
+  top: 14%;
+  left: 15%;
+  z-index: 1;
+}
+
+.logo-pompiers {
+  position: absolute;
+  bottom: 14%;
+  right: 13%;
+  z-index: 1;
+}
+
+.hidden-test-test {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* POP UP START */
+.formulaire-bas-de-page {
+  position: fixed;
+  right: 112px;
+  z-index: 9;
+}
+
+.formulaire-bas-de-page .top {
+  /* background-color: #1f73ba; */
+  background-color: #e647ec;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.formulaire-bas-de-page .top .content-top {
+  padding: 10px 15px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.formulaire-bas-de-page .top .content-top p {
+  margin: 0 5px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.formulaire-bas-de-page .bottom {
+  background-color: #eee;
+}
+
+.formulaire-bas-de-page .bottom .content-bottom {
+  padding: 10px;
+}
+
+.formulaire-bas-de-page .bottom .content-bottom p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.formulaire-bas-de-page .bottom input[type="submit"] {
+  background-color: #e647ec;
+  color: white;
+}
+
+.formulaire-bas-de-page .fa-phone-alt {
+  font-size: 30px;
+}
+
+.formulaire-bas-de-page #main-haut,
+.formulaire-bas-de-page #main-bas {
+  font-size: 32px;
+}
+
+.arrow-icon {
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.left-bar {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 3px;
+  display: block;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  float: right;
+  border-radius: 2px;
+}
+
+.left-bar:after {
+  content: "";
+  background-color: white;
+  width: 11px;
+  height: 3px;
+  display: block;
+  float: right;
+  border-radius: 6px 10px 10px 6px;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+  z-index: -1;
+}
+
+.right-bar {
+  position: absolute;
+  background-color: transparent;
+  top: 0px;
+  left: 7px;
+  width: 11px;
+  height: 3px;
+  display: block;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  float: right;
+  border-radius: 2px;
+}
+
+.right-bar:after {
+  content: "";
+  background-color: white;
+  width: 11px;
+  height: 3px;
+  display: block;
+  float: right;
+  border-radius: 10px 6px 6px 10px;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+  z-index: -1;
+}
+
+.open .left-bar:after {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
+}
+
+.open .right-bar:after {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+}
+
+#popup {
+  max-width: 315px;
+}
+
+#popup .form-text,
+#popup input {
+  font-size: 14px !important;
+}
+
+#popup input[type="submit"] {
+  font-size: 16px !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#popup #errors-popup li {
+  font-size: 12px !important;
+}
+
+#popup #success-popup {
+  font-size: 14px !important;
+}
+
+#errors-popup {
+  display: none;
+}
+
+#success-popup {
+  display: none;
+}
+
+/* POP UP END */
+/* Pagination Style */
+.splide__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.splide__pagination--custom li {
+  padding: 0 10px;
+}
+
+.splide__pagination--custom button {
+  background-color: #fbfbfb;
+  height: 20px;
+  width: 20px;
+  border: solid white 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform ease-in 0.2s;
+  transition: -webkit-transform ease-in 0.2s;
+  transition: transform ease-in 0.2s;
+  transition: transform ease-in 0.2s, -webkit-transform ease-in 0.2s;
+  -webkit-box-shadow: 1px 1px 1px black;
+          box-shadow: 1px 1px 1px black;
+}
+
+.splide__pagination--custom button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: #f39d9f;
+}
+
+.splide__pagination--custom .is-active {
+  background-color: red;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* Others */
+.span-gray {
+  color: #555555 !important;
+  font-weight: bold;
+}
+
+.btn-dark-blue a {
+  background-color: #000000;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 4px;
+  margin: 0 20px;
+  color: white !important;
+  border: none !important;
+  text-decoration: none;
+}
+
+.btn-dark-blue a:hover {
+  color: #0d6efd;
+}
+
+/* ERROR PAGE */
+.error-page h1 {
+  font-size: 120px;
+}
+
+.error-page .error-content {
+  margin: 180px 0px 120px 0px;
+  text-align: center;
+}
+
+.error-page .error-content a {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 50px;
+  border-radius: 30px;
+  background-color: #1f73ba;
+  color: white !important;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+  .error-page .error-content h1 {
+    font-size: 80px !important;
+  }
+  .error-page .error-content a {
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .error-page .error-content h1 {
+    font-size: 50px !important;
+  }
+  .error-page .error-content a {
+    font-size: 12px !important;
+    padding: 8px 30px !important;
+  }
+}
+
+/* RECRUTEMENT DIPLOM */
+.diplom-recrutement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.diplom-recrutement p {
+  margin: 0;
+}
+
+/* CONTACT PAGE */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", Sans-serif;
+  color: #273044;
+}
+
+ul {
+  list-style: none;
+}
+
+.ban {
+  text-align: center;
+  margin: 50px 20px;
+  font-family: "Montserrat", Sans-serif;
+  color: #273044;
+}
+
+.ban h2 {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.ban h4 {
+  margin: 0;
+}
+
+.ban p {
+  font-size: 14px;
+}
+
+@media (max-width: 528px) {
+  .ban .demande-info {
+    font-size: 33px;
+  }
+}
+
+#centres-formation {
+  color: #555555;
+}
+
+#centres-formation ul li {
+  margin-bottom: 20px;
+}
+
+#centres-formation ul li .infos {
+  padding: 27px 0 14px 0;
+  border-top: 1px solid #e1e2e4;
+}
+
+#centres-formation ul li .infos .icon-left {
+  width: 35px;
+  font-size: 35px;
+  color: #1f73ba;
+  float: left;
+  margin-right: 20px;
+}
+
+#centres-formation ul li .infos .icon-text {
+  width: 100%;
+  text-align: start;
+}
+
+#centres-formation ul li .infos .icon-text h5 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+#centres-formation ul li .infos .icon-text p {
+  font-family: "Open Sans", sans-serif;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+#centres-formation .map {
+  width: 100%;
+  height: 100%;
+}
+
+#formulaire {
+  margin: 40px 20px 60px 20px;
+}
+
+#formulaire .networks-2 {
+  font-size: 50px;
+}
+
+#formulaire .networks-2 i {
+  padding: 20px;
+}
+
+#formulaire .container-erp-form input,
+#formulaire .container-erp-form textarea {
+  display: block;
+  padding: 6px 12px !important;
+  line-height: 1.42857143;
+  border-radius: 0;
+  border: 2px solid #f0f2f5;
+  background: #eeeeee;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #555;
+  font-size: 18px;
+}
+
+#formulaire .container-erp-form textarea {
+  min-height: 200px;
+}
+
+#formulaire .container-erp-form label {
+  display: block;
+  padding: 6px 12px !important;
+  line-height: 1.42857143;
+  border-radius: 0;
+  border: 2px solid #eeeeee;
+  background: #eeeeee;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #555;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#formulaire .container-erp-form label:hover {
+  color: #888686;
+  font-weight: 600;
+  border: 2px solid #cecece;
+}
+
+#formulaire .container-erp-form input[type="submit"] {
+  background-color: #1f73ba;
+  color: #fff;
+  font-family: "Montserrat";
+  line-height: 14px;
+  font-size: 14px !important;
+  padding: 18px 25px !important;
+  border-radius: 25px !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#formulaire .container-erp-form input[type="file"] {
+  display: none !important;
+}
+
+@media (min-width: 1200px) {
+  .container-erp-form {
+    padding: 0 10%;
+  }
+}
+
+/* Invalid feedback form */
+.invalid-form {
+  border: #f4616e solid 2px !important;
+}
+
+.message-success {
+  background-color: #4bf08a;
+}
+
+.message-success h3 {
+  padding: 0;
+  margin: 0;
+  color: #273044;
+  font-size: 32px;
+}
+
+.message-invalid {
+  background-color: #f35f6b;
+}
+
+.message-invalid h3 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 32px;
+  color: white;
+}
+
+/* Page Inscription */
+.ban {
+  margin: 50px 20px;
+  font-family: "Montserrat", Sans-serif;
+  color: #273044;
+}
+
+.ban h2 {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.ban h4 {
+  font-size: 16px;
+}
+
+.ban p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.ban .search-job {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+/* Page Photos */
+#viewer li {
+  overflow: hidden;
+}
+
+#viewer img {
+  cursor: pointer;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: -webkit-transform ease-in 0.5s;
+  transition: -webkit-transform ease-in 0.5s;
+  transition: transform ease-in 0.5s;
+  transition: transform ease-in 0.5s, -webkit-transform ease-in 0.5s;
+  -webkit-box-shadow: 2px 2px 11px #b7c0c9 !important;
+          box-shadow: 2px 2px 11px #b7c0c9 !important;
+}
+
+#viewer img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+#viewer .viewer-navbar {
+  background-color: black !important;
+}
+
+/* ALERT FORMULAR */
+.alert-danger {
+  font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+footer h5 {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+footer ul {
+  margin: 0 !important;
+}
+
+footer ul li,
+footer ul h5 {
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+
+footer a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff !important;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .networks {
+  font-size: 3.25rem;
+  margin: 0 13px 0 13px;
+}
+
+footer .agrements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .agrements img {
+  width: 100%;
+}
+
+.span-dark {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #000000 !important;
+}
+
+/* Page accueil */
+#home-cards {
+  padding: 60px 0;
+}
+
+#home-cards .secu-incendie {
+  background-color: #d61c22;
+}
+
+#home-cards .secu-surete {
+  background-color: #43b187;
+}
+
+#home-cards .secourisme {
+  background-color: #4682b4;
+}
+
+#home-cards .hab-elec {
+  background-color: #eab830;
+}
+
+#home-cards .home-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 236px;
+  height: 220px;
+  text-align: center;
+  border-radius: 10px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#home-cards .home-card a {
+  text-decoration: none;
+  color: #fff !important;
+}
+
+#home-cards .home-card a h4 {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 11px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#home-cards .home-card:hover {
+  -webkit-transform: translateY(-13px);
+          transform: translateY(-13px);
+}
+
+/* hidden under large devices only */
+@media (max-width: 1024px) {
+  #home-cards {
+    display: none;
+  }
+}
+
+/* about section start */
+#about {
+  background-color: #1e4a79;
+  border-bottom: 20px solid #fff;
+  /* hidden from large devices only */
+}
+
+#about .wallpaper {
+  background-image: url("../../img/about.png");
+  height: 100%;
+  background-position: left;
+  background-size: cover;
+}
+
+#about .about {
+  padding: 60px 0;
+  /* for extra large devices only */
+}
+
+#about .about h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+#about .about p {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 200;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1201px) {
+  #about .about p {
+    padding: 0 80px;
+  }
+}
+
+#about .about a {
+  text-decoration: none;
+  background-color: #1f73ba;
+  color: #fff !important;
+  font-family: "Montserrat";
+  line-height: 14px;
+  font-size: 14px;
+  padding: 18px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+#about .about a:hover {
+  background-color: #43b187;
+}
+
+@media (max-width: 991px) {
+  #about .unhide-large {
+    display: none;
+  }
+}
+
+/* about section end */
+#figures {
+  padding: 50px;
+  background-image: url(../../img/accueil-formations/chiffres-scaled.webp), url(../../img/accueil-formations/chiffres-scaled.jpeg);
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 800px) {
+  #figures {
+    background-image: url(../../img/accueil-formations/chiffres-scaled-resized.webp), url(../../img/accueil-formations/chiffres-scaled.jpeg) !important;
+  }
+}
+
+#figures .figures {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+}
+
+#figures .figures h2 {
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#figures .figures .caption {
+  margin-top: 20px;
+}
+
+#figures .figures .caption h4 {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+#figures .figures .caption p {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+#presentation {
+  margin-top: 5px;
+  /* nos-valeurs element start */
+  /* nos-valeurs element end */
+  /* nos-formations element start */
+  /* for large devices only */
+  /* for small devices only */
+  /* nos-formations element end */
+  /* nos-partenaires element start */
+  /* Responsive images Url */
+  /* nos-partenaires element end */
+}
+
+#presentation h3 {
+  font-family: "Courgette";
+  text-align: center;
+  font-size: 32px;
+  color: #273044;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 50px 0;
+}
+
+#presentation #nos-valeurs .card-presentation {
+  background-color: #eef1f7;
+  border-left: 5px solid #1f73ba;
+  padding: 30px 32px;
+  margin-bottom: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#presentation #nos-valeurs .card-presentation h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#presentation #nos-valeurs .card-presentation ul {
+  padding-left: 20px;
+}
+
+#presentation #nos-valeurs .card-presentation ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#presentation #nos-valeurs .card-presentation:hover {
+  -webkit-box-shadow: 1px 1px 11px 0px #777;
+          box-shadow: 1px 1px 11px 0px #777;
+}
+
+#presentation #nos-valeurs .card-presentation i {
+  font-size: 50px !important;
+}
+
+#presentation #nos-formations {
+  cursor: not-allowed !important;
+  /*-------------------------------*/
+  /*-------------------------------*/
+  /* PRESENTATION SECU-INCENDIE */
+  /*-------------------------------*/
+  /*-------------------------------*/
+  /* PRESENTATION SURETE SECU */
+  /*-------------------------------*/
+  /*-------------------------------*/
+  /* PRESENTATION SECOURISME */
+  /*-------------------------------*/
+  /*-------------------------------*/
+  /* PRESENTATION HAB ELEC */
+  /*-------------------------------*/
+  /*-------------------------------*/
+}
+
+#presentation #nos-formations #presentation-secu-incendie,
+#presentation #nos-formations #presentation-surete-secu,
+#presentation #nos-formations #presentation-secourisme,
+#presentation #nos-formations #presentation-hab-elec {
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+}
+
+#presentation #nos-formations #presentation-secu-incendie::before,
+#presentation #nos-formations #presentation-surete-secu::before,
+#presentation #nos-formations #presentation-secourisme::before,
+#presentation #nos-formations #presentation-hab-elec::before {
+  content: " ";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#presentation #nos-formations #presentation-secu-incendie .formation-card,
+#presentation #nos-formations #presentation-surete-secu .formation-card,
+#presentation #nos-formations #presentation-secourisme .formation-card,
+#presentation #nos-formations #presentation-hab-elec .formation-card {
+  position: relative;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+  z-index: 5;
+  height: 100%;
+}
+
+#presentation #nos-formations #presentation-secu-incendie .formation-card .formation-home-animation h4,
+#presentation #nos-formations #presentation-surete-secu .formation-card .formation-home-animation h4,
+#presentation #nos-formations #presentation-secourisme .formation-card .formation-home-animation h4,
+#presentation #nos-formations #presentation-hab-elec .formation-card .formation-home-animation h4 {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 11px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#presentation #nos-formations #presentation-secu-incendie {
+  background-image: url(../../img/accueil-formations/secu-incendie.webp), url(../../img/accueil-formations/secu-incendie.jpeg);
+}
+
+#presentation #nos-formations #presentation-surete-secu {
+  background-image: url(../../img/accueil-formations/surete-secu.webp), url(../../img/accueil-formations/surete-secu.jpeg);
+}
+
+#presentation #nos-formations #presentation-secourisme {
+  background-image: url(../../img/accueil-formations/secourisme.webp), url(../../img/accueil-formations/secourisme.jpeg);
+}
+
+#presentation #nos-formations #presentation-hab-elec {
+  background-image: url(../../img/accueil-formations/hab-elec.webp), url(../../img/accueil-formations/hab-elec.jpeg);
+}
+
+@media (min-width: 992px) {
+  #presentation #nos-formations {
+    height: 400px;
+  }
+  #presentation #nos-formations #presentation-secu-incendie,
+  #presentation #nos-formations #presentation-surete-secu,
+  #presentation #nos-formations #presentation-secourisme,
+  #presentation #nos-formations #presentation-hab-elec {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
+  #presentation #nos-formations #presentation-secu-incendie::before,
+  #presentation #nos-formations #presentation-surete-secu::before,
+  #presentation #nos-formations #presentation-secourisme::before,
+  #presentation #nos-formations #presentation-hab-elec::before {
+    background-color: #777777c4;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  #presentation #nos-formations #presentation-secu-incendie .formation-card .formation-home-animation,
+  #presentation #nos-formations #presentation-surete-secu .formation-card .formation-home-animation,
+  #presentation #nos-formations #presentation-secourisme .formation-card .formation-home-animation,
+  #presentation #nos-formations #presentation-hab-elec .formation-card .formation-home-animation {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  #presentation #nos-formations #presentation-secu-incendie:hover .formation-home-animation,
+  #presentation #nos-formations #presentation-surete-secu:hover .formation-home-animation,
+  #presentation #nos-formations #presentation-secourisme:hover .formation-home-animation,
+  #presentation #nos-formations #presentation-hab-elec:hover .formation-home-animation {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  #presentation #nos-formations #presentation-secu-incendie:hover::before,
+  #presentation #nos-formations #presentation-surete-secu:hover::before,
+  #presentation #nos-formations #presentation-secourisme:hover::before,
+  #presentation #nos-formations #presentation-hab-elec:hover::before {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  #presentation #nos-formations {
+    height: 800px;
+  }
+  #presentation #nos-formations #presentation-secu-incendie,
+  #presentation #nos-formations #presentation-surete-secu,
+  #presentation #nos-formations #presentation-secourisme,
+  #presentation #nos-formations #presentation-hab-elec {
+    margin-bottom: 5px;
+  }
+  #presentation #nos-formations #presentation-secu-incendie::before,
+  #presentation #nos-formations #presentation-surete-secu::before,
+  #presentation #nos-formations #presentation-secourisme::before,
+  #presentation #nos-formations #presentation-hab-elec::before {
+    background-color: #777777;
+    opacity: 0.5;
+  }
+}
+
+#presentation #nos-partenaires {
+  margin-bottom: 50px;
+  /* for large devices only */
+  /* for small devices only */
+}
+
+#presentation #nos-partenaires .partenaire {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#presentation #nos-partenaires .partenaire .partenaire-logo img {
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  #presentation #nos-partenaires .partenaire {
+    width: 20%;
+  }
+  #presentation #nos-partenaires .partenaire .partenaire-logo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  #presentation #nos-partenaires .partenaire {
+    width: 50%;
+  }
+  #presentation #nos-partenaires .partenaire .partenaire-logo {
+    width: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  #presentation {
+    /*-------------------------------*/
+    /*-------------------------------*/
+    /* PRESENTATION SECU-INCENDIE */
+    /*-------------------------------*/
+    /*-------------------------------*/
+    /* PRESENTATION SURETE SECU */
+    /*-------------------------------*/
+    /*-------------------------------*/
+    /* PRESENTATION SECOURISME */
+    /*-------------------------------*/
+    /*-------------------------------*/
+    /* PRESENTATION HAB ELEC */
+    /*-------------------------------*/
+    /*-------------------------------*/
+  }
+  #presentation #presentation-secu-incendie {
+    background-image: url(../../img/accueil-formations/secu-incendie-resized.webp), url(../../img/accueil-formations/secu-incendie-resized.jpeg) !important;
+  }
+  #presentation #presentation-surete-secu {
+    background-image: url(../../img/accueil-formations/surete-secu-resized.webp), url(../../img/accueil-formations/surete-secu-resized.jpeg) !important;
+  }
+  #presentation #presentation-secourisme {
+    background-image: url(../../img/accueil-formations/secourisme-resized.webp), url(../../img/accueil-formations/secourisme-resized.jpeg) !important;
+  }
+  #presentation #presentation-hab-elec {
+    background-image: url(../../img/accueil-formations/hab-elec-resized.webp), url(../../img/accueil-formations/hab-elec-resized.jpeg) !important;
+  }
+}
+
+/* srolltop button start */
+#scrolltop {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  inset: auto 1.5rem 1.5rem auto;
+  border: none;
+  outline: none;
+  color: #2073ba;
+  font-size: 64px;
+  line-height: 0;
+  background-color: transparent;
+  opacity: 0.8;
+}
+
+#scrolltop:hover {
+  opacity: 1;
+}
+
+/* scrolltop button end */
+/* Page Formations-initiales */
+a {
+  text-decoration: none !important;
+  color: #273044 !important;
+}
+
+#DIV1 {
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 70px 0 70px 0;
+}
+
+#DIV1 h2 {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+#DIV1 h4 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#DIV1 img {
+  max-width: 100%;
+}
+
+#DIV2 {
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 55px;
+}
+
+#DIV3 {
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 55px;
+}
+
+/* .formations {
+    margin-bottom: 180px;
+} */
+.thumbnail {
+  padding: 10px;
+  margin: 0 10px;
+  position: relative;
+  text-align: left;
+  border: #e0e0e0 3px solid;
+  width: 287px;
+}
+
+.thumbnail .subtitle {
+  margin: 0 0 10px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.thumbnail a h5 {
+  margin: 0 0 15px;
+  padding: 0 0 19px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.thumbnail .time {
+  border-top: #e0e0e0 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 28px;
+  font-size: 13px;
+}
+
+.thumbnail .time i {
+  margin-right: 5px;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+.hidden {
+  width: 520px;
+  position: absolute;
+  top: -20px;
+  left: -50px;
+  right: -50px;
+  padding: 35px 40px 22px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 10px 30px 11px #00000040;
+          box-shadow: 0 10px 30px 11px #00000040;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+  z-index: 100;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.hidden .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 10px;
+  color: #777;
+}
+
+.hidden .logo img {
+  max-width: 40px;
+  margin-right: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hidden .caption h4 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  margin: 0 0 15px;
+}
+
+.hidden .caption p {
+  margin: 16px 0 13px 0;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777;
+}
+
+.hidden .infos {
+  margin-bottom: 18px;
+}
+
+.hidden .infos .size {
+  font-size: 13px;
+}
+
+.hidden .btn-prev a {
+  display: block;
+  padding: 14px 15px;
+  margin: 0 0 28px;
+  background-color: #385bce;
+  width: 100%;
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.hidden .btn-prev a:hover {
+  background-color: #16d292;
+}
+
+.en-savoir-plus a {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #fff !important;
+  border-radius: 5px;
+  width: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.en-savoir-plus a .btn-more {
+  padding: 15px 25px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+.en-savoir-plus a:hover {
+  color: #2073ba !important;
+}
+
+#more {
+  margin-bottom: 80px;
+}
+
+#more .underline {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#more .consultation {
+  font-size: 14px;
+}
+
+footer {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+footer h5 {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+footer a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff !important;
+}
+
+footer a:hover {
+  color: #000 !important;
+}
+
+footer .networks {
+  font-size: 3.25rem;
+  margin: 0 13px 0 13px;
+}
+
+@media (min-width: 992px) {
+  .thumbnail:hover .hidden {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+  }
+}
+
+/* Page Formation Show */
+.main .alert {
+  font-size: 14px;
+  border-left: 5px solid #f9f0c3;
+  padding: 15px;
+}
+
+.main .alert .btn-close {
+  padding: 8px;
+  font-size: 12px;
+}
+
+.main .infos-formations h1 {
+  text-align: left;
+  font-size: 50px;
+  font-family: "Courgette", sans-serif;
+  font-weight: 700;
+  color: #333333;
+  margin: 40px 0;
+}
+
+.main .infos-formations .anchor {
+  padding: 5px;
+}
+
+.main .infos-formations .anchor a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #273044;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .infos-formations .anchor a img,
+.main .infos-formations .anchor a svg {
+  width: 40px;
+  margin-right: 8px;
+}
+
+.main .infos-formations .anchor a .caption {
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+
+.main .infos-formations .anchor a .caption p {
+  margin: 0;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.main .infos-formations .anchor a .caption h6 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.main .infos-formations .anchor a:hover .caption h6 {
+  color: #000;
+}
+
+.main .infos-formations nav {
+  margin-top: 50px;
+}
+
+.main .infos-formations nav ul {
+  /* for medium devices only */
+  /* for small devices only */
+}
+
+.main .infos-formations nav ul li a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  padding: 20px 10px;
+  background-color: #f0f4fa;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  border-top: 3px solid #f0f4fa;
+  color: #273044;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.main .infos-formations nav ul li a:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+.main .infos-formations nav ul li a.active {
+  color: #000;
+  background-color: #fff;
+  border-top: 3px solid #385bce;
+}
+
+@media (min-width: 768px) {
+  .main .infos-formations nav ul li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0;
+            flex: 1 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .main .infos-formations nav ul li {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+}
+
+.main .infos-formations .tab-content #description .image {
+  margin-top: 50px;
+  width: 100%;
+  display: block;
+}
+
+.main .infos-formations .tab-content #description .image img {
+  max-width: 100%;
+}
+
+.main .infos-formations .tab-content #description .description ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.main .infos-formations .tab-content #description .description #modules {
+  cursor: pointer;
+}
+
+.main .infos-formations .tab-content #description .description #modules:hover > p {
+  color: #0d6efd;
+}
+
+.main .infos-formations .tab-content #description .formation-title {
+  width: 100%;
+}
+
+.main .infos-formations .tab-content #description .formation-title h2 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.main .infos-formations .tab-content #description .formation-title p {
+  font-size: 15px;
+  color: #555;
+}
+
+.main .infos-formations .tab-content #description .objectif {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.main .infos-formations .tab-content #description .objectif ul {
+  padding: 0 0 0 20px !important;
+  margin: 0;
+  list-style: circle !important;
+  color: #555;
+  font-size: 14px;
+}
+
+.main .infos-formations .tab-content #description .objectif ul li {
+  margin-bottom: 8px;
+}
+
+.main .infos-formations .tab-content #description .objectif .atom {
+  margin-right: 15px;
+  background-color: #818a91;
+  padding: 25px;
+  color: #fff;
+  border-radius: 50px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main .infos-formations .tab-content #description .objectif .atom {
+    display: block;
+  }
+}
+
+.main .infos-formations .tab-content #description .objectif .caption h4 {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.main .infos-formations .tab-content #description .objectif .caption p {
+  font-size: 15px;
+  color: #555;
+}
+
+.main .infos-formations .tab-content #description .description {
+  width: 100%;
+  margin: 20px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main .infos-formations .tab-content #description .description .caption {
+  padding: 20px 10px;
+}
+
+.main .infos-formations .tab-content #description .description .caption h4 {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.main .infos-formations .tab-content #description .description .caption ul {
+  color: #555;
+  font-size: 14px;
+}
+
+.main .infos-formations .tab-content #description .description .caption ul li {
+  margin-bottom: 8px;
+}
+
+.main .infos-formations .tab-content #description .description .caption p {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.main .infos-formations .tab-content #curriculum .module-section {
+  margin: 30px 0 15px 0;
+}
+
+.main .infos-formations .tab-content #curriculum .module-section h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #333;
+  font-weight: 400;
+}
+
+.main .infos-formations .tab-content #curriculum .module-section .caption {
+  margin-bottom: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f0f4fa;
+  padding: 13px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.main .infos-formations .tab-content #curriculum .module-section .caption .number {
+  font-size: 14px;
+  color: #aaa;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.main .infos-formations .tab-content #curriculum .module-section .caption .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.main .infos-formations .tab-content #curriculum .module-section .caption .module-title {
+  -webkit-box-flex: 25;
+      -ms-flex: 25;
+          flex: 25;
+}
+
+.main .infos-formations .tab-content #curriculum .module-section .caption .module-title h5 {
+  margin: 0 0 0 5px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.main .infos-formations .tab-content #curriculum .module-section .caption:hover {
+  background-color: #f0f4faa6;
+}
+
+.main .infos-formations .tab-content #curriculum .module-section .caption:hover .module-title h5 {
+  color: #385bce;
+}
+
+.main .infos-formations .tab-content #announcement {
+  margin-top: 30px;
+}
+
+.main .infos-formations .tab-content #announcement caption {
+  font-weight: bold;
+  color: #555;
+}
+
+.main .infos-formations .tab-content #announcement table {
+  font-size: 14px;
+  color: #555;
+}
+
+.main .infos-proccess {
+  padding: 12px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: solid gray 1px;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+.main .infos-proccess .info {
+  width: 100%;
+  border-bottom: 1px solid #e1e2e4;
+}
+
+.main .infos-proccess .info .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+
+.main .infos-proccess .info .caption p {
+  font-size: 16px !important;
+  margin: 0;
+}
+
+.main .infos-proccess .info .caption svg {
+  width: 28px;
+}
+
+.main .infos-proccess .calendar {
+  border: 1px solid #e1e2e4;
+  margin-bottom: 5px;
+}
+
+.main .infos-proccess .calendar .caption {
+  padding: 25px 20px;
+}
+
+.main .infos-proccess .calendar .caption h6 {
+  color: #333;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.main .infos-proccess .calendar .caption .table {
+  color: #555;
+  font-size: 14px;
+}
+
+.main .infos-proccess .calendar .caption .table tr {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.main .infos-proccess .calendar .caption .table tr .day {
+  text-align: start;
+  text-transform: capitalize;
+}
+
+.main .infos-proccess .calendar .caption .table tr .timetable {
+  text-align: end;
+  text-transform: uppercase;
+  padding-left: 3px;
+}
+
+.main .infos-proccess .calendar .caption .table tr:hover {
+  color: green;
+}
+
+/* Page Calendrier */
+#banner {
+  margin-top: 91px;
+}
+
+#banner .banner-title h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+}
+
+#banner .banner-subtitle p {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* CALENDAR PAGES START */
+#calendars [class*="calendar-title-"] {
+  color: white !important;
+  text-transform: uppercase;
+  padding: 30px 0 !important;
+  margin: 0;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  font-family: "Montserrat", Sans-serif;
+}
+
+#calendars .content .title-calendar-content {
+  font-size: 16px !important;
+  font-family: "Montserrat";
+  color: #000;
+  font-weight: 700;
+}
+
+#calendars .content li {
+  margin-bottom: 8px !important;
+}
+
+#calendars .content ul {
+  padding-left: 20px;
+  list-style: disc;
+  margin-top: 25px;
+}
+
+#calendars .content ul li {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+#calendars .content ul li .red-important {
+  color: red;
+}
+
+#calendars .calendar-title-1 {
+  background-color: #273044;
+}
+
+#calendars .calendar-section-1 .content {
+  height: 100%;
+  width: 100%;
+  padding: 25px;
+  border: solid 2px #273044;
+}
+
+#calendars .calendar-title-2 {
+  background-color: #bd2727;
+}
+
+#calendars .calendar-section-2 .content {
+  height: 100%;
+  width: 100%;
+  padding: 25px;
+  border: solid 2px #bd2727;
+}
+
+#calendars .calendar-title-3 {
+  background-color: #ffcc2f;
+}
+
+#calendars .calendar-section-3 .content {
+  height: 100%;
+  width: 100%;
+  padding: 25px;
+  border: solid 2px #ffcc2f;
+}
+
+#calendars .calendar-title-4 {
+  background-color: #4ece33;
+}
+
+#calendars .calendar-section-4 .content {
+  height: 100%;
+  width: 100%;
+  padding: 25px;
+  border: solid 2px #4ece33;
+}
+
+/* CALENDAR PAGES END */
+/* Page Presentation */
+.presentation {
+  text-align: left !important;
+}
+
+.img-presentation img {
+  max-width: 100%;
+}
+
+.presentation-title {
+  color: #273044;
+  font-weight: bold;
+}
+
+#team-perf {
+  padding: 35px !important;
+  background-color: #273044;
+}
+
+#team-perf .team-text {
+  padding: 30px !important;
+}
+
+#team-perf h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#team-perf p {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+}
+
+#team-perf .btn-savoir-plus {
+  background-color: #000000;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white !important;
+  font-size: 20px;
+  padding: 25px 50px;
+}
+
+#team-perf .btn-savoir-plus:hover {
+  color: #0d6efd !important;
+}
+
+#team-perf img {
+  width: 100%;
+}
+
+#teach {
+  padding: 35px !important;
+}
+
+#teach img {
+  max-width: 100%;
+}
+
+#certification {
+  margin-bottom: 90px !important;
+  padding: 35px !important;
+  background-color: #eef1f7;
+}
+
+#certification h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+#certification img {
+  max-width: 100%;
+}
+
+#certification ul {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#certification li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #555555;
+  font-size: 14px;
+}
+
+#certification li:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+#certification i {
+  margin-right: 10px;
+  font-size: 43px;
+  color: #273044;
+}
+
+#certification img {
+  width: 600px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1399px) {
+  .infos-proccess {
+    margin-top: 0 !important;
+    margin-bottom: 50px !important;
+  }
+}
+
+@media screen and (max-width: 1245px) {
+  .title h1 {
+    font-size: 50px !important;
+  }
+  .title h5 {
+    font-size: 30px !important;
+  }
+}
+
+/* Media Queries Page accueil */
+@media screen and (max-width: 1070px) {
+  .logo-princier-monaco {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .logo-pompiers {
+    right: 49%;
+    -webkit-transform: translateX(44%);
+            transform: translateX(44%);
+  }
+  .logo-princier-monaco img {
+    max-width: none !important;
+    width: 539px !important;
+    height: auto !important;
+  }
+  .search-job {
+    width: 100% !important;
+  }
+  #team-perf img,
+  #teach img,
+  #certification img {
+    max-width: 450px;
+  }
+  #certification li:not(:last-child) {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  #google-review {
+    width: 80%;
+    margin: auto;
+  }
+  .btn-more {
+    padding: 15px 22px !important;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 870px) {
+  .title h1 {
+    font-size: 40px !important;
+  }
+  .title h5 {
+    font-size: 20px !important;
+  }
+  .logo-princier-monaco {
+    top: 17%;
+  }
+  .btn-dark-blue a {
+    padding: 8px 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .ban {
+    margin: 0 !important;
+    font-size: 10px !important;
+  }
+  .ban p {
+    text-align: left;
+  }
+  .diplom-recrutement {
+    display: block;
+  }
+  .diplom-recrutement p {
+    text-align: center;
+    margin: 10px 0;
+  }
+  #team-perf .team-text {
+    padding: 10px !important;
+  }
+  .btn-savoir-plus {
+    font-size: 17px !important;
+    padding: 16px 10px !important;
+  }
+  #certification {
+    padding: 20px !important;
+  }
+  #certification img {
+    max-width: 336px;
+    margin-top: 20px !important;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 570px) {
+  .hidden {
+    display: none;
+  }
+  #figures {
+    padding: 20px !important;
+  }
+  .logo-princier-monaco img {
+    top: 20% !important;
+    max-width: none !important;
+    width: 350px !important;
+    height: auto !important;
+  }
+  .title {
+    top: 50% !important;
+  }
+  .content .splide__arrow--prev,
+  .content .splide__arrow--next {
+    display: none !important;
+  }
+  .splide__slide .img-slider {
+    height: 80vh !important;
+  }
+  #google-review .splide__arrow--next,
+  #google-review .splide__arrow--prev {
+    top: 33% !important;
+  }
+  #google-review .splide__arrows i {
+    font-size: 20px !important;
+  }
+  .logo-pompiers {
+    display: none;
+  }
+  #team-perf {
+    padding: 20px !important;
+  }
+  #team-perf .team-text {
+    padding: 10px !important;
+  }
+  #team-perf img,
+  #teach img {
+    max-width: 350px;
+  }
+  .logo img {
+    width: 272px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #scrolltop {
+    display: none !important;
+  }
+  .formulaire-bas-de-page {
+    width: 100% !important;
+    right: 0px !important;
+  }
+  .formulaire-bas-de-page .fa-phone-alt {
+    font-size: 25px;
+  }
+  .formulaire-bas-de-page #main-haut,
+  .formulaire-bas-de-page #main-bas {
+    font-size: 28px;
+  }
+  .formulaire-bas-de-page .content-top p {
+    font-size: 11px !important;
+  }
+  .formulaire-bas-de-page .top {
+    background-color: black !important;
+  }
+  .formulaire-bas-de-page input[type="submit"] {
+    background-color: black !important;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .logo-princier-monaco {
+    top: 18%;
+  }
+  .title {
+    top: 55% !important;
+  }
+  .navigation .mobile > ul {
+    top: 55%;
+  }
+}
+
+/* text page formations à renouveler */
+#formations-a-renouveler {
+  /* for mega large devices only */
+  /* for extra large devices only */
+  /* for medium devices only */
+}
+
+#formations-a-renouveler .faq {
+  margin-top: 30px;
+}
+
+#formations-a-renouveler .faq h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 19px;
+  color: #273044;
+  font-weight: bold;
+  text-align: center;
+}
+
+#formations-a-renouveler .captions .caption {
+  font-family: "Montserrat", sans-serif;
+}
+
+#formations-a-renouveler .captions .caption h4 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #273044;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#formations-a-renouveler .captions .caption p {
+  text-align: justify;
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 14px;
+}
+
+#formations-a-renouveler .captions .caption p a {
+  color: #000;
+  font-weight: bold;
+}
+
+#formations-a-renouveler .captions .caption p a.btn-reserve {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 15px 30px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#formations-a-renouveler .captions .caption p a.btn-reserve:hover {
+  color: #1f73ba;
+}
+
+@media (min-width: 1400px) {
+  #formations-a-renouveler .captions {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 1201px) {
+  #formations-a-renouveler .captions .caption {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  #formations-a-renouveler img {
+    display: none;
+  }
+}
+
+#formations-a-renouveler .line-divider {
+  margin-bottom: 30px;
+}
+
+#formations-a-renouveler .line-divider .line {
+  border-top: 1px solid #000;
+  height: 1px;
+}
+/*# sourceMappingURL=styles.css.map */
